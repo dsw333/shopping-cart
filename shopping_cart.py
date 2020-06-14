@@ -55,6 +55,21 @@ for selected_id in selected_ids:
     matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
     matching_product = matching_products[0]
     total_price = total_price + matching_product["price"]
-    print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"])
+    print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
 
-print("TOTAL PRICE: " + str(total_price))
+from datetime import date
+today = date.today()
+
+print("------------------")
+print ("GREEN FAIRE GROCERS")
+print ("WWW.GREEN-FAIRE-GROCERS.NYC")
+print("Today's date:", today)
+print("------------------")
+print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
+print("------------------")
+#print (subtotal) #USD
+#print ( tax ) #USD
+print("TOTAL PRICE: " + str(total_price)) #USD
+print("------------------")
+print("PLEASE SHOP AGAIN")
+print("------------------")
