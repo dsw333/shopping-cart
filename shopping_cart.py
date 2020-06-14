@@ -56,6 +56,9 @@ from datetime import datetime
 now = datetime.now()
 dt_string = now.strftime ("%d/%m/%Y %H:%M:%S")
 
+tax = total_price*.0875
+format_tax = "${:,.2f}.format(tax)"
+
 print("------------------")
 print("GREEN FAIRE GROCERS")
 print("WWW.GREEN-FAIRE-GROCERS.NYC")
@@ -67,9 +70,9 @@ for selected_id in selected_ids:
     total_price = total_price + matching_product["price"]
     print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
 print("------------------")
-#print (subtotal) #USD
-#print ( tax ) #USD
-print("TOTAL PRICE: " + str(total_price)) #USD
+print("SUBTOTAL: $" + str(round(total_price,2)))
+print("TAX: $" + str(round(total_price * .0875,2)))
+print("TOTAL PRICE: $" + str(round(total_price * 1.0856,2)))
 print("------------------")
 print("PLEASE SHOP AGAIN")
 print("------------------")
